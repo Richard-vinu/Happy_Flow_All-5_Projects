@@ -1,17 +1,16 @@
 import  express from "express"
-
 import  route from './src/route.js';
-import  mongoose  from "mongoose"
+import db from '../Happy_Flow_All-5_Projects/src/DB/database.js'
+
+import db from "./src/DB/database.js";
 const app = express()
 const PORT = 8080
 
-
-mongoose.connect("mongodb+srv://richardwork:2YLjcp0favzUASR9@cluster3.bli4t.mongodb.net/BookAssignment?retryWrites=true&w=majority")
-
+db()
 
 app.use('/test', (req,res)=>{
 
-    res.send("hell people")
+    res.send("hello people ❤💻❤")
 })
 
 app.use('/',route)

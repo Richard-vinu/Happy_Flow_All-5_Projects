@@ -1,6 +1,5 @@
-# Plutonium
 
-Repository for backend cohort - Plutonium
+Repository for backend cohort 
 
 ## Blogging Site Mini Project Requirement
 

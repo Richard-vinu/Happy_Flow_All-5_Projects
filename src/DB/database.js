@@ -5,10 +5,11 @@ dotenv.config()
 let db = async (req,res)=>{
 try{
     mongoose.connect(process.env.MONGO_URI)
+
     console.log('MongoDB Connected...!');
 }
 catch(err){
-    return res.send(err)
+    console.log(err);
 }
 
 }

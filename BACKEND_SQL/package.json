@@ -1,14 +1,15 @@
 {
   "name": "Happy_Flow_All-5_Projects",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon app.mjs"
+    "start": "nodemon app.js"
   },
   "repository": "https://github.com/Richard-vinu/Happy_Flow_All-5_Projects.git",
   "author": "Richard-vinu <richardnova1999@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mysql": "^2.18.1",

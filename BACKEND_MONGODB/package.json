@@ -2,6 +2,10 @@
   "name": "Happy_Flow_All-5_Projects",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon app.mjs"
+  },
   "repository": "https://github.com/Richard-vinu/Happy_Flow_All-5_Projects.git",
   "author": "Richard-vinu <richardnova1999@gmail.com>",
   "license": "MIT",

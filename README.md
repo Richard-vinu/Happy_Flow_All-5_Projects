@@ -1,5 +1,5 @@
 # Happy_Flow_All-5_Projects
-
+`Pls create your own env file`
 ## Scalable URL Shortner Project Requirement
 
 ## Phase I

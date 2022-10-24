@@ -3,7 +3,7 @@ Repository for backend cohort <br>
 
 Frame_Work : `express.js`<br>
 
-Data_Base  : `SQL` 
+Data_Base  : `SQL` and `MONGODB`
 
 
 ## Blogging Site Mini Project Requirement

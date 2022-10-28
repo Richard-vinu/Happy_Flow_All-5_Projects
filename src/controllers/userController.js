@@ -1,11 +1,10 @@
-import User from '../models/userModel.js'
+import User from '../models/User.js'
 import uploadFiles from '../aws.js'
 import bcrypt from 'bcrypt'
-import userModel from '../models/userModel.js'
-import jwt from 'jsonwebtoken   '
-import { message } from 'prompt'
+import userModel from '../models/User.js'
+import jwt from 'jsonwebtoken'
 let sign = process.env.SIGNATURE
-console.log(sign);
+
 let userRegister = async (req,res)=>{
     try{
         let data = req.body
@@ -44,6 +43,10 @@ let userLogin  = async (req,res)=>{
     return res.status(400).send('sign Up')
 
     data.password = bcrypt.compare(user.password,data.password)
+
+    let payload = {
+        userId :user._id
+    }
 
     let token = jwt.sign(payload,sign)
 

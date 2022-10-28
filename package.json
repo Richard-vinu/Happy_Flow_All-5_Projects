@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
+  "scripts": {
+    "start": "nodemon app.mjs"
+  },
   "repository": "https://github.com/Richard-vinu/Happy_Flow_All-5_Projects.git",
   "author": "Richard-vinu <richardnova1999@gmail.com>",
   "license": "MIT",
@@ -11,6 +14,7 @@
     "bcrypt": "^5.1.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.11.0",
     "mongoose": "^6.6.7",
     "multer": "^1.4.5-lts.1",

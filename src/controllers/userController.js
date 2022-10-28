@@ -51,4 +51,4 @@ let userLogin  = async (req,res)=>{
    
 }
 
-export {userRegister}
+export {userRegister,userLogin}

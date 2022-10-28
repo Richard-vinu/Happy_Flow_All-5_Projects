@@ -1,6 +1,11 @@
 import User from '../models/userModel.js'
 import uploadFiles from '../aws.js'
-
+import bcrypt from 'bcrypt'
+import userModel from '../models/userModel.js'
+import jwt from 'jsonwebtoken   '
+import { message } from 'prompt'
+let sign = process.env.SIGNATURE
+console.log(sign);
 let userRegister = async (req,res)=>{
     try{
         let data = req.body
@@ -8,12 +13,15 @@ let userRegister = async (req,res)=>{
          
         let profileLink = await uploadFiles(files[0])
     
+    
         data.profile = profileLink
     
-        //JSON.parse() method to convert JSON String to JSON Object.
+        //JSON.parse() method to convert JSON String to  JS Object.
         data.address = JSON.parse(data.address)
-    
-        console.log(data.address);
+
+   
+        data.password = await bcrypt.hash(data.password,10)
+       
     
         let createData = await User.create(data)
     
@@ -23,8 +31,24 @@ let userRegister = async (req,res)=>{
     catch(err){
         console.log(err);
     }
+}
 
 
+let userLogin  = async (req,res)=>{
+
+    let data = req.body
+
+    let user = await userModel.findOne({email:data.email})
+
+    if(!user)
+    return res.status(400).send('sign Up')
+
+    data.password = bcrypt.compare(user.password,data.password)
+
+    let token = jwt.sign(payload,sign)
+
+    res.status(200).send({message:'login sucessfull',token:token})
+   
 }
 
 export {userRegister}

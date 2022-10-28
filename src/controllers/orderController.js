@@ -1,5 +1,4 @@
 import User from '../models/User.js'
-import Product from '../models/Product.js'
 import Cart from '../models/Cart.js'
 import Order from '../models/Order.js'
 

@@ -1,7 +1,7 @@
 
 Repository for backend cohort <br>
 
-Data_Base  : `SQL` and `MONGODB`
+DataBase  : `SQL` and `MONGODB`
 
 
 ## Blogging Site Mini Project Requirement

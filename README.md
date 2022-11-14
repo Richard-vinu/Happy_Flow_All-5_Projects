@@ -1,8 +1,6 @@
 
 Repository for backend cohort <br>
 
-Frame_Work : `express.js`<br>
-
 Data_Base  : `SQL` and `MONGODB`
 
 
